@@ -12,7 +12,20 @@ Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-
 Text Domain: skills-twenty-seventeen-child
 */
 
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
 
+/*--------------------------------------------------------------
+8.0 Lists
+--------------------------------------------------------------*/
+
+ul,
+ol {
+	margin: 0 0 1.5em 2em;
+	padding: 0;
+}
 /*--------------------------------------------------------------
 10.0 Links
 --------------------------------------------------------------*/
@@ -115,6 +128,7 @@ a:hover .nav-title,
         background-color:rgba(0,150,180,.9);
         border-color:rgba(0,150,180,.9);
         text-align: center;
+        border: 0;
     }
     .navigation-top a {
     color: #fff;
@@ -168,7 +182,7 @@ Footer
         border-top: 0;
     }
 
-
+@media screen and (min-width: 48em){
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
 		width: 33.33%;
@@ -184,24 +198,65 @@ Footer
 		float: left;
 		width: 33.33%;
 		padding: 0 5px;
-	}
+    }
+}
 /*--------------------------------------------------------------
 Banner
 --------------------------------------------------------------*/
 .banner-skills{
     width:100%;
-    height:480px;
-    background-image:url(/assets/images/primavera-steps-default.jpg);
-    background-color:#e5e5e5;
+    height:200px;
+    background-size:cover;
+    background-position:center bottom;
+    overflow:hidden;
+
 }
-
+.banner-skills .banner-image{
+    background-image:url(assets/images/primavera-steps-default.jpg);
+    background-position: center top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+	position:absolute;
+	width:100%;
+    height:280px;
+    top:0;
+    left:0;
+    z-index: 0;
+}
 .banner-skills .banner-slogan{
+    color:#fff;
+    display:block;
+    z-index:100;
+    position:absolute;
+    font-weight:700;
+    font-size:1.5em;
+    bottom:10px;
+    right:20px;
+    text-align:right;
+}
+@media screen and (min-width: 30em){
+ 	.banner-skills .banner-image{
+    	height:360px;
+    }
+}
+@media screen and (min-width: 48em){
+    
+    .banner-skills{
+    	height:400px;
+    }
+	.banner-skills .banner-image{
+    	height:600px;
+    }
+    .banner-skills .banner-slogan{
+    	bottom:20px;
+    	right:20%;
+    	font-size:2em;
 
-
+    }
 }
 .category-header{
     width:100%;
-    height:400px;
+    height:200px;
     z-index: 1;
 }
 .category-header .category-image{
@@ -209,14 +264,53 @@ Banner
     left:0;
     top:0;
     width:100%;
-    height:400px;
+    height:200px;
     background-image:url(assets/images/primavera-steps-default.jpg);
     background-color:#e5e5e5;
     background-size: cover;
+    background-position:center center;
     z-index:0;
 }
 .category-header  .page-title{
     display:none;
+}
+.category-gestao-pessoas .category-header .category-image{
+    background-image:url(assets/images/bg-lg-pessoas.jpg);
+}
+.category-contabilidade .category-header .category-image{
+    background-image:url(assets/images/bg-lg-contabilidade.jpg);
+}
+.category-tesouraria .category-header .category-image{
+    background-image:url(assets/images/bg-lg-tesouro.jpg);
+}
+.category-compras .category-header .category-image{
+    background-image:url(assets/images/bg-lg-compras.jpg);
+}
+.category-vendas .category-header .category-image,
+.category-compras-vendas .category-header .category-image{
+    background-image:url(assets/images/bg-lg-vendas.jpg);
+}
+@media screen and (min-width: 48em){
+	.category-header{
+		height:400px;
+	}
+	.category-header .category-image{
+		height:400px;
+	}
+}
+/*--------------------------------------------------------------
+13.0 Layout
+--------------------------------------------------------------*/
+.wrap {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+	padding-left: 1em;
+    padding-right: 1em;
+    
+}
+.page-one-column .panel-content .wrap {
+		max-width: 940px;
 }
 /*--------------------------------------------------------------
 13.1 Header
@@ -238,13 +332,16 @@ Banner
     }
 
 /*--------------------------------------------------------------
+13.2 Front Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
 13.4 Posts
 --------------------------------------------------------------*/
 .single-featured-image-header{
     max-height:400px;
     overflow:hidden;
     position:relative;
-    margin-top:-72px;
 }
 .single-featured-image-header img{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -255,7 +352,13 @@ Banner
 .single-featured-image-header:hover img{
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
-    transform:scale(1.1);
+    transform:scale(1.05);
+}
+.page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
 }
 @media screen and (min-width: 48em){
     .page-template-inicio.has-sidebar:not(.error404) #primary,
@@ -263,10 +366,28 @@ Banner
         width:100%;
     }
 }
-.archive .content-area .site-main{
+@media screen and (min-width: 64em){
+
+    .has-sidebar:not(.error404) #primary {
+		float: left;
+		width: 68%;
+	}
+
+	.has-sidebar #secondary {
+		float: right;
+		padding-top: 0;
+		width: 26%;
+	}
+}
+.recent-posts,
+.blog .content-area .site-main,
+.archive .content-area .site-main
+{
     display:flex;
     flex-wrap: wrap;
 }
+.recent-posts .post,
+.blog .post,
 .archive .post{
     overflow:hidden;
     width: 100%;
@@ -277,18 +398,27 @@ Banner
     transition: transform .2s ease;
     box-sizing: border-box;
 }
+.recent-posts .post:hover,
+.blog .post:hover,
 .archive .post:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
+
+.recent-posts .post:active,
+.blog .post:active,
 .archive .post:active{
-    transform: scale(0.95);
+    transform: scale(1);
 }
+.recent-posts .post .post-thumbnail,
+.blog .post .post-thumbnail,
 .archive .post .post-thumbnail{
     position:absolute;
     top:0;
     left:0;
     z-index: 1;
 }
+.recent-posts .post-thumbnail a img,
+.blog .post-thumbnail a img,
 .archive .post-thumbnail a img{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -296,13 +426,19 @@ Banner
 	-webkit-transition: filter 0.2s;
 	transition: filter 0.2s, transform 0.6s;
 }
+.recent-posts .post:hover .post-thumbnail a img,
+.recent-posts .post:focus .post-thumbnail a img,
+.blog .post:hover .post-thumbnail a img,
+.blog .post:focus .post-thumbnail a img,
 .archive .post:hover .post-thumbnail a img,
 .archive .post:focus .post-thumbnail a img {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
     opacity: 1;
-    transform:scale(1.2);
+    transform:scale(1.1);
 }
+.recent-posts .post .entry-header,
+.blog .post .entry-header,
 .archive .post .entry-header{
     position:absolute;
     background-color:rgba(0,150,180,.9);
@@ -313,44 +449,150 @@ Banner
     z-index: 2;
     box-sizing: border-box;
     padding:0;
+    margin:0;
 }
+.recent-posts .post .entry-header .entry-title a,
+.recent-posts .post .entry-header .entry-meta a,
+.blog .post .entry-header .entry-title a,
+.blog .post .entry-header .entry-meta a,
 .archive .post .entry-header .entry-title a,
 .archive .post .entry-header .entry-meta a{
     text-decoration: none;
     box-shadow: none;
     color:#fff;
 }
+.recent-posts .post .entry-header .entry-title,
+.blog .post .entry-header .entry-title,
 .archive .post .entry-header .entry-title{
     padding:0;
     margin:0;
 }
+.recent-posts .post .entry-header .entry-title a,
+.blog .post .entry-header .entry-title a,
 .archive .post .entry-header .entry-title a{
     width:100%;
     display:block;
     padding:10px 20px 20px;
 }
+.recent-posts .post .post-edit-link,
+.blog .post .post-edit-link,
 .archive .post  .post-edit-link{
     float:right;
     padding:10px 20px;
 }
+.recent-posts .post .entry-header .entry-meta a,
+.blog .post .entry-header .entry-meta a,
 .archive .post .entry-header .entry-meta a{
     padding:10px 20px;
     float: left;
 }
-
+.recent-posts .post .entry-meta,
+.blog .post .entry-meta,
 .archive .post .entry-meta{
     display:flex;
     padding:0;
 }
 
 @media screen and (min-width: 48em){
+    .recent-posts .post,
+    .blog .post,
     .archive .post{
         width:48%;
         margin:1%;
     }
+    .recent-posts .post:first-child,
+    .blog .post:first-child,
     .archive .post:first-child{
         width:100%;
     }
+}
+
+
+/*--------------------------------------------------------------
+Lista de comeptencias
+--------------------------------------------------------------*/
+
+.skills-list{
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin:0;
+    padding:0;
+    justify-content: center;
+}
+.skills-list li a{
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+    box-shadow:none;
+    box-sizing: border-box;
+    font-weight: 600;
+    padding:5px;
+    position:absolute;
+    bottom:0;
+    color:#fff;
+    transition: background-color .2s ease;
+}
+.skills-list li {
+    position:relative; 
+    display:block;
+    width:140px;
+    height:140px;
+    margin:5px;
+    background-image:url(assets/images/menu-skill-default.jpg);
+    background-size: 100%;
+    font-size: 1em;
+    transition:transform .2s ease, background-size .6s ease;
+}
+.skills-list li.pessoas {
+    background-image:url(assets/images/menu-skill-pessoas.jpg);
+}
+.skills-list li.compras {
+    background-image:url(assets/images/menu-skill-compras.jpg);
+}
+.skills-list li.vendas{
+    background-image:url(assets/images/menu-skill-vendas.jpg);
+}
+.skills-list li.contabilidade{
+    background-image:url(assets/images/menu-skill-contabilidade.jpg);
+}
+.skills-list li.tesouraria{
+    background-image:url(assets/images/menu-skill-tesouro.jpg);
+}
+.skills-list li:hover a,
+.skills-list li:focus a{
+    background-color:rgba(0,150,180,.6);
+    color:#fff;
+    box-shadow: none;
+}
+.skills-list li:hover,
+.skills-list li:focus{
+    transform:scale(1.01);
+    background-size: 120%;
+}
+.skills-list li:active a{
+	transform:scale(.99);
+	
+}
+@media screen and (min-width: 48em){
+
+    .skills-list li {
+        width: 167px;
+        height: 167px;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 64em){
+	.skills-list li {
+        width: 216px;
+        height: 216px;
+        font-size: 1.5rem;
+	}
+	.skills-list li a{
+        padding:20px;
+    }
+	
 }
 
 /*--------------------------------------------------------------
@@ -389,6 +631,7 @@ post-ratings plugin
     width:40px;
     height:40px;
 }
+
 .post-ratings img:nth-child(1){
     right:60px;
     transform:rotate(180deg);
@@ -424,3 +667,85 @@ Yarpp Plugin
 .yarpp-related li{
     padding:4px 0;
 }
+
+
+/*--------------------------------------------------------------
+Meta Slider
+--------------------------------------------------------------*/
+.bgc-compras{
+    background-color:rgba(110, 70, 150, 0.9);
+}
+.bgc-vendas{
+    background-color:rgba(230, 160, 30, 0.9);
+}
+.bgc-contabil{
+    background-color:rgba(40, 60, 160, 0.9);
+}
+.bgc-tesouro{
+    background-color:rgba(140, 200, 60, 0.9);
+}
+.bgc-pessoas{
+    background-color:rgba(190, 150, 100, 0.9);
+}
+
+.slider-certificacoes .metaslider .caption-wrap{
+    background-color:transparent;
+    left:auto;
+    right:0;
+    height:100%;
+    width:100%;
+    opacity: 1;
+}
+.slider-certificacoes .metaslider .caption-wrap .caption{
+    padding:0;
+}
+.slider-certificacoes .slide-cert {
+	padding:20px 40px;
+	height:100%;
+	position:absolute;
+    width:100%;
+        color:#fff;
+
+}
+.slider-certificacoes .slide-cert .big-text{
+	font-size:2em;
+	display:block;
+	line-height:1em;
+}
+.entry-content .flex-direction-nav li a{
+    box-shadow: none;
+    background-color:transparent;
+}
+.entry-content .flex-direction-nav li a:hover{
+    box-shadow: none;
+    background-color:transparent;
+}
+@media screen and (min-width: 48em){
+	.slider-certificacoes .metaslider .caption-wrap{
+    	width:60%;
+	}
+	.slider-certificacoes .slide-cert {
+    	padding:120px 60px 0 0;
+        text-align:right;
+        /* font-size: 20px; */
+        
+    }
+    .slider-certificacoes .slide-cert .big-text{
+    font-size:3em;
+    }
+}
+@media screen and (min-width: 64em){
+    	.slider-certificacoes .slide-cert {
+        padding:160px 60px 0 0;
+        }
+}
+/*
+Formato de conteúdo no slider 
+    <a href="http://pt.primaverabss.com/pt/certificacao-primavera-accounting-and-fiscal/" target=_blank>
+    <div class="slide-cert bgc-contabil">
+    Certificação PRIMAVERA
+    <span class="big-text">Contabilidade</span>
+    </div>
+    </a>
+
+*/
