@@ -1,0 +1,191 @@
+/*
+Theme Name: Skills - Child 2017
+Theme URI: http://impacting.digital
+Description: Skills is a Twenty Fifteen Child Theme made by Impacting Digital for PRIMAVERA Academy Skills
+Author: Impacting Digital - David Pereira
+Author URI: http://impacting.digital
+Template: twentyseventeen
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready, Primavera Academy, Primavera, Academy, Skills
+Text Domain: skills-twenty-seventeen-child
+*/
+
+/*--------------------------------------------------------------
+Head
+--------------------------------------------------------------*/
+/* Site Branding */
+
+	.site-branding {
+        background-color:rgba(0,165,200,.95);
+        padding:5px 0;
+            text-align: center;
+    }
+
+/*--------------------------------------------------------------
+12.0 Navigation
+--------------------------------------------------------------*/
+    .navigation-top {
+        background-color:rgba(0,150,180,.9);
+        border-color:rgba(0,150,180,.9);
+        text-align: center;
+    }
+    .navigation-top a {
+    color: #fff;
+    }
+    .main-navigation a:hover{
+        color:#000;
+    }
+
+    .main-navigation.toggled-on ul{
+        background-color:transparent;
+    }
+    #top-menu{
+        text-align: center;
+    }
+
+    .menu-toggle{
+        width:100%;
+        background-color:rgba(0,0,0,1);
+        color:#fff;
+        box-sizing: border-box;
+        margin:0;
+    }
+    .menu-toggle:hover{
+        background-color:rgba(0,0,0,.5);
+    }
+    .navigation-top .current-menu-item > a, .navigation-top .current_page_item > a{
+        color:#003B49
+    }
+    .social-navigation{
+        float: right;
+        text-align: right;
+    }
+
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+    .info-footer{
+        font-size:.7em;
+        display:block;
+        width:100%;
+        clear:both;
+
+    }
+    .site-footer{
+        background-color:#f1f2f3;
+    }
+    .site-footer .widget ul li, .site-footer .widget ol li{
+        border-bottom: 0;
+        border-top: 0;
+    }
+/*--------------------------------------------------------------
+Banner
+--------------------------------------------------------------*/
+.banner-skills{
+    width:100%;
+    height:480px;
+    background-image:url(/assets/images/primavera-steps-default.jpg);
+    background-color:#e5e5e5;
+}
+
+.banner-skills .banner-slogan{
+
+
+}
+.category-header{
+    width:100%;
+    height:400px;
+    z-index: 1;
+}
+.category-header .category-image{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:400px;
+    background-image:url(assets/images/primavera-steps-default.jpg);
+    background-color:#e5e5e5;
+    background-size: cover;
+    z-index:0;
+}
+/*--------------------------------------------------------------
+13.4 Posts
+--------------------------------------------------------------*/
+.single-featured-image-header{
+    max-height:400px;
+    overflow:hidden;
+    position:relative;
+    margin-top:-72px;
+}
+.single-featured-image-header img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition:all .6s ease;
+    width:100%;
+}
+.single-featured-image-header:hover img{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform:scale(1.1);
+}
+@media screen and (min-width: 48em){
+    .has-sidebar:not(.error404) #primary {
+        width:100%;
+    }
+}
+
+/*--------------------------------------------------------------
+post-ratings plugin
+--------------------------------------------------------------*/
+
+
+.rating-block{
+    background-color:#00A5C8;
+    color:#fff;
+    width:100%;
+    height:90px;
+    padding:0;
+    position:relative;
+}
+.rating-block .question{
+    font-size:1em;
+    padding: 16px 10px 10px 20px;
+    width:240px;
+}
+.post-ratings-text{
+    position:absolute;
+    right:30px;
+    bottom:4px;
+}
+.post-ratings{
+    background-color:#008CB4;
+    padding: 6px 20px;
+    font-size: .8em;
+}
+.post-ratings img{
+    position:absolute;
+    right:20px;
+    top:10px;
+    content: url('assets/images/thumbs-icon.png');
+    width:40px;
+    height:40px;
+}
+.post-ratings img:nth-child(1){
+    right:60px;
+    transform:rotate(180deg);
+}
+.post-ratings-text{
+    display:block!important;
+}
+@media screen and (min-width: 48em){
+    .rating-block .question{
+        font-size:1.5em;
+        width:300px;
+    }
+    .post-ratings img:nth-child(1){
+    right:80px;
+    }
+}
