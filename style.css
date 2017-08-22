@@ -720,6 +720,9 @@ Perfis Equipa
 /*--------------------------------------------------------------
 Newsletter
 --------------------------------------------------------------*/
+.form-newsletter{
+    max-width: 300px;
+}
 .form-newsletter label{
     width: 88px;
     position: absolute;
