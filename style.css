@@ -509,11 +509,12 @@ Banner
 
 
 /*--------------------------------------------------------------
-Lista de comeptencias
+Lista de competencias
 --------------------------------------------------------------*/
 
 .skills-list{
     display:flex;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     margin:0;
@@ -537,8 +538,8 @@ Lista de comeptencias
 .skills-list li {
     position:relative; 
     display:block;
-    width:140px;
-    height:140px;
+    width:134px;
+    height:134px;
     margin:5px;
     background-image:url(assets/images/menu-skill-default.jpg);
     background-size: 100%;
@@ -594,6 +595,110 @@ Lista de comeptencias
     }
 	
 }
+/*--------------------------------------------------------------
+Depomentos
+--------------------------------------------------------------*/
+.depoimentos{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.depoimento{
+    position:relative;
+    background-color:#f2f2f2;
+	padding:80px 20px 20px;
+	margin:100px 10px;
+	background:no-repeat #f2f2f2 url(assets/images/quota-mark.png) right 20px top 20px;
+	background-size:60px;
+}
+.depoimentos .foto{
+	width:140px;
+	height:140px;
+	overflow:hidden;
+	box-shadow:-4px 4px rgba(0,150,180,.9);
+	position:absolute;
+	top:-80px;
+}
+.depoimentos .foto img{
+	filter: grayscale(100%);
+}
+.depoimentos .foto:hover img{
+	filter: grayscale(0%);
+}
+
+.depoimentos .frase{
+	margin-bottom:20px;
+	font-size:1.2em;
+    font-style: italic;
+}
+.depoimentos .nome{
+	font-size:.9em;
+	font-weight:700;
+
+
+}
+.depoimentos .detalhes{
+	font-size:.7em;
+
+}
+@media screen and (min-width: 48em){
+	.depoimentos .foto{
+		top:-10px;
+		left:-80px;
+	}
+	.depoimento{
+		padding:80px 60px 60px 80px;
+		margin-left:100px;
+		margin-top:0;
+		box-sizing:border-box;
+	}
+
+}
+/*--------------------------------------------------------------
+Perfis Equipa
+--------------------------------------------------------------*/
+.perfil-equipa{
+    position:relative;
+    background-color:#f2f2f2;
+	padding:80px 20px 20px;
+	margin:140px 10px 80px;
+	background-size:60px;
+}
+.perfil-equipa .foto{
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	box-shadow:-4px 4px rgba(0,150,180,.9);
+	position:absolute;
+	top:-60px;
+}
+.perfil-equipa .nome{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.perfil-equipa .pais{
+    font-size: .8em;
+    margin-bottom:40px;
+}
+.perfil-equipa .foto img{
+	filter: grayscale(100%);
+}
+.perfil-equipa .foto:hover img{
+	filter: grayscale(0%);
+}
+@media screen and (min-width: 48em){
+	.perfil-equipa  .foto{
+		top:-20px;
+		left:-60px;
+	}
+	.perfil-equipa {
+		padding:80px 60px 60px 80px;
+		margin-left:80px;
+		margin-top:80px;
+		box-sizing:border-box;
+	}
+
+}
 
 /*--------------------------------------------------------------
 post-ratings plugin
@@ -645,7 +750,7 @@ post-ratings plugin
         width:300px;
     }
     .post-ratings img:nth-child(1){
-    right:80px;
+        right:80px;
     }
 }
 
@@ -720,14 +825,35 @@ Meta Slider
     box-shadow: none;
     background-color:transparent;
 }
+.slider-certificacoes .flex-control-paging{
+    align-items: center;
+}
+.slider-certificacoes .flex-control-paging li a{
+    border-radius:0;
+    background: #fff;
+    height:10px;
+    width: 40px;
+    display:block;
+    border-top:2px solid #bbb;
+    box-shadow:none;
+}
+.slider-certificacoes .flex-control-paging li a:hover{
+    background: #fff;
+    border-top:4px solid #999;
+}
+.slider-certificacoes .flex-control-paging li a.flex-active{
+    border-top:4px solid #00A5C8;
+    background:#00A5C8;
+    height:6px;
+}
 @media screen and (min-width: 48em){
 	.slider-certificacoes .metaslider .caption-wrap{
     	width:60%;
 	}
 	.slider-certificacoes .slide-cert {
-    	padding:120px 60px 0 0;
+    	padding:110px 60px 0 0;
         text-align:right;
-        /* font-size: 20px; */
+         font-size: 20px; 
         
     }
     .slider-certificacoes .slide-cert .big-text{
