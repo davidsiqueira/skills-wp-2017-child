@@ -69,7 +69,21 @@ global $twentyseventeencounter;
 						endwhile;
 						wp_reset_postdata();
 						?>
+
 					</div><!-- .recent-posts -->
+
+					<div class="popular-posts">
+						<h2 class="entry-title">Mais populares</h2>
+					<?php
+						if (function_exists('wpp_get_mostpopular'))
+						$args = array(
+							'thumbnail_width' => 900,
+							'thumbnail_height' => 300,
+							'post_html' => '<li><article class=post> <h2 class=entry-header> {title}</h2><div class="post-thumbnail"> {thumb} </div></article></li>'
+						);
+							wpp_get_mostpopular($args);
+					?>
+					</div><!-- Popular posts -->
 				<?php endif; ?>
 			<?php endif; ?>
 

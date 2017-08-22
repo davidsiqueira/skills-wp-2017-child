@@ -35,12 +35,8 @@
 					</nav><!-- .social-navigation -->
 				<?php endif;
 
-				// get_template_part( 'template-parts/footer/site', 'info' );
+				get_template_part( 'template-parts/footer/site', 'info' );
 ?>
-			<div class="info-footer">
-			PRIMAVERA Business Software Solutions, S.A.</br>
-			© 2017 - Todos os Direitos Resevados
-			</div>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
