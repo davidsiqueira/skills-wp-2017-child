@@ -11,7 +11,7 @@
 ?>
 <div class="site-info">
 	<div class="info-footer">
-			<img class="simbolo-primavera" src="/assets/images/simbolo-primavera-blk.png"/>
+			<div class="simbolo-primavera"></div>
 			PRIMAVERA Business Software Solutions, S.A.</br>
 			© 2017 - Todos os Direitos Resevados
 	</div>

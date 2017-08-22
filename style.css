@@ -181,7 +181,15 @@ Footer
         border-bottom: 0;
         border-top: 0;
     }
-
+    .simbolo-primavera{
+        width: 30px;
+        height: 30px;
+        background-image: url(assets/images/simbolo-primavera-blk.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        float: left;
+        margin-right: 10px;
+    }
 @media screen and (min-width: 48em){
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
@@ -710,10 +718,25 @@ Perfis Equipa
 }
 
 /*--------------------------------------------------------------
+Newsletter
+--------------------------------------------------------------*/
+.form-newsletter label{
+    width: 88px;
+    position: absolute;
+    margin: 14px 0 0 10px;
+    color:#888;
+}
+.form-newsletter input[type="text"],.form-newsletter input[type="email"]{
+    width:100%;
+    text-indent:90px;
+}
+.form-newsletter input[type="submit"]{
+    width:100%;
+}
+
+/*--------------------------------------------------------------
 post-ratings plugin
 --------------------------------------------------------------*/
-
-
 .rating-block{
     background-color:#00A5C8;
     color:#fff;
@@ -887,6 +910,7 @@ Formato de conteúdo no slider
 
 /*--------------------------------------------------------------
 Plugin WPP - for popupar posts
+https://wordpress.org/plugins/wordpress-popular-posts/
 --------------------------------------------------------------*/
 
 .wpp-list{
@@ -910,10 +934,14 @@ flex-wrap:wrap;
     height:200px;
 }
 @media screen and (min-width: 48em){
-
+.wpp-list li{
+    width:50%;
+    }
 }
 @media screen and (min-width: 64em){
 .wpp-list li{
-width:33%;
-}
+    width:25%;
+    height: 240px;
+    font-size: 10pt;
+    }
 }

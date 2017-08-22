@@ -77,6 +77,8 @@ global $twentyseventeencounter;
 					<?php
 						if (function_exists('wpp_get_mostpopular'))
 						$args = array(
+							'post_type' => 'post',
+							'limit' => 4,
 							'thumbnail_width' => 900,
 							'thumbnail_height' => 300,
 							'post_html' => '<li><article class=post> <h2 class=entry-header> {title}</h2><div class="post-thumbnail"> {thumb} </div></article></li>'
