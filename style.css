@@ -339,7 +339,11 @@ Banner
         opacity:1;
         transform:scale(1.02);
     }
-
+    @media screen and (min-width: 48em){
+        .site-branding {
+            margin-bottom: 70px!important;
+        }   
+    }
 /*--------------------------------------------------------------
 13.2 Front Page
 --------------------------------------------------------------*/
@@ -934,6 +938,11 @@ flex-wrap:wrap;
     margin:0;
 
 }
+
+.wpp-no-data{
+    visibility: hidden;
+}
+
 .popular-posts .post{
     height:200px;
 }

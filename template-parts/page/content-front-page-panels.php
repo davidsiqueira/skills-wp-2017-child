@@ -79,13 +79,14 @@ global $twentyseventeencounter;
 						$args = array(
 							'post_type' => 'post',
 							'limit' => 4,
+							'range' => 'all',
 							'thumbnail_width' => 900,
 							'thumbnail_height' => 300,
 							'post_html' => '<li><article class=post> <h2 class=entry-header> {title}</h2><div class="post-thumbnail"> {thumb} </div></article></li>'
 						);
 							wpp_get_mostpopular($args);
 					?>
-					</div><!-- Popular posts -->
+					</div><!--/ .Popular posts -->
 				<?php endif; ?>
 			<?php endif; ?>
 
