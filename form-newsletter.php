@@ -12,19 +12,9 @@
 ?>
 
 
-<form class="form-newsletter" data-smk-form action="https://p.smrk.io/sm.js?b=d21344db675d4a981bc77916723341ce4c54d9b9" method="post">
-	<input type="hidden" name="redirect_ok" value="/obrigada/">
-    <input type="hidden" name="redirect_error" value="/not_found/">
-    <label for="nl-frm-nome">O seu nome</label>  <input id="nl-frm-nome" type="text" name="lead[first_name]" required="required"><br>
-    <label for="nl-frm-ultimoNome">O seu apelido</label>  <input id="nl-frm-ultimoNome" type="text" name="lead[last_name]" required="required"><br>
-    <label for="nl-frm-email">O seu e-mail</label> <input id="nl-frm-email" type="email" name="lead[email]" required="required"><br>
-	<input type="submit" value="Enviar">
-</form>
-
-
-<form class="form-newsletter" data-smk-form action="https://p.smrk.io/sm.js?b=d21344db675d4a981bc77916723341ce4c54d9b9" method="post">
-	<input type="hidden" name="redirect_ok" value="/obrigada/">
-    <input type="hidden" name="redirect_error" value="/not_found/">
+<form class="form-newsletter" data-smk-form action="https://primaveracademy.smark.io/api.php/directlead/f05d5c7b131eb6d8d9f69005b6ba7422539d78c3" method="post">
+	<input type="hidden" name="redirect_ok" value="http://id-prc1-04.azurewebsites.net/obrigada/">
+    <input type="hidden" name="redirect_error" value="http://id-prc1-04.azurewebsites.net/not_found/">
     <label for="nl-frm-nome">O seu nome</label>  <input id="nl-frm-nome" type="text" name="lead[first_name]" required="required" placeholder=""><br>
     <label for="nl-frm-email">O seu e-mail</label> <input id="nl-frm-email" type="email" name="lead[email]" required="required" placeholder="email@email.com"><br>
 	<input type="submit" value="Subescrever">
