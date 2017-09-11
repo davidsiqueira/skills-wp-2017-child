@@ -14,3 +14,13 @@ register_sidebar( array(
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
 ) );
+
+
+function max_title_length( $title ) {
+    $max = 60;
+    if( strlen( $title ) > $max ) {
+    return substr( $title, 0, $max ). " &hellip;";
+    } else {
+    return $title;
+    }
+    }

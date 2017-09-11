@@ -132,6 +132,8 @@ a:hover .nav-title,
     }
     .navigation-top a {
     color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
     }
     .navigation-top .main-navigation .menu .menu-item a:hover{
         color:#000;
@@ -140,6 +142,13 @@ a:hover .nav-title,
 
     .main-navigation.toggled-on ul{
         background-color:transparent;
+    }
+
+    .main-navigation li,
+    .main-navigation > div > ul{
+        border-bottom: 0;
+        border-top: 0;
+        
     }
     #top-menu{
         text-align: center;
@@ -163,6 +172,74 @@ a:hover .nav-title,
         text-align: right;
     }
 
+/* Header Seach Form Toggle */
+
+    .search-menu{
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+    }
+    .site-header .search-form{
+
+    }
+    .search-bar{
+        background-color: #fff;
+    }
+    .search-toggle-button,
+    input.toggle-search[type=checkbox]{
+        position: absolute;
+        top: -42px;
+        right: 0;
+        z-index: 100;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    input.toggle-search[type=checkbox] {
+        z-index: 99;
+        opacity: 0;
+     }
+    .search-toggle-button .icon{
+        color:#fff;
+    }
+    .search-toggle-button:hover .icon{
+        opacity:.8;
+    }
+    .search-toggle-button .icon{
+        width:2em;
+        height:2em;
+    }        
+    
+     .search-menu .search-field{
+         border:0;
+         padding-top:20px;
+         padding-bottom:20px;
+         border-radius:0;
+         top:100px;
+         font-size: 32px;
+         text-align: center;
+     }
+     /* Default State */
+     .search-menu .search-bar {
+        height:0;
+        overflow: hidden;
+        top:-60px;
+        transition:all .2s ease;
+     }
+     
+     /* Toggled State */
+     input.toggle-search[type=checkbox]:checked ~ .search-bar {
+        height:100px;
+        top:0px;
+        
+     }   
+
+    @media screen and (min-width: 48em){
+        .search-toggle-button,
+        input.toggle-search[type=checkbox]{
+            top:-48px;
+        }
+    }        
 
 /*--------------------------------------------------------------
 Footer
@@ -221,8 +298,8 @@ Banner
 }
 .banner-skills .banner-image{
     background-image:url(assets/images/primavera-steps-default.jpg);
-    background-position: center top;
-    background-size: auto 100%;
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
 	position:absolute;
 	width:100%;
@@ -236,7 +313,6 @@ Banner
     display:block;
     z-index:100;
     position:absolute;
-    font-weight:700;
     font-size:1.5em;
     bottom:10px;
     right:20px;
@@ -250,16 +326,16 @@ Banner
 @media screen and (min-width: 48em){
     
     .banner-skills{
-    	height:400px;
+    	height:300px;
     }
 	.banner-skills .banner-image{
-    	height:600px;
+    	height:500px;
     }
     .banner-skills .banner-slogan{
     	bottom:20px;
     	right:20%;
-    	font-size:2em;
-
+    	font-size:2.5em;
+        line-height: 1em;
     }
 }
 .category-header{
@@ -318,7 +394,7 @@ Banner
     
 }
 .page-one-column .panel-content .wrap {
-		max-width: 940px;
+		max-width: 1200px;
 }
 /*--------------------------------------------------------------
 13.1 Header
@@ -331,6 +407,9 @@ Banner
         text-align: center;
         margin-bottom: 70px;
     }
+    .custom-header{
+        margin-bottom:0!important;
+    }
     .site-branding a{
         transition:transform .2s;
     }
@@ -339,15 +418,62 @@ Banner
         opacity:1;
         transform:scale(1.02);
     }
-    @media screen and (min-width: 48em){
-        .site-branding {
-            margin-bottom: 70px!important;
-        }   
+    .custom-logo-link img{
+        max-width: 280px;
     }
+    @media screen and (min-width: 48em){
+        .site-header{
+            display: flex;
+            width: 100%;
+        }
+        .site-branding a{
+            padding:14px 0 0;
+            vertical-align: middle;
+            
+        }            
+        .site-branding {
+            margin-bottom: 0!important;
+            height:100%;
+        }   
+        .custom-logo-link img{
+            max-width: 180px;
+        }
+        .navigation-top{
+            position: relative;
+        }
+        .navigation-top .wrap{
+            padding-left:10px;
+            padding-right: 0;
+        }
+        .navigation-top.site-navigation-fixed .wrap{
+            padding:0;
+        }
+        .navigation-top.site-navigation-fixed .wrap #top-menu{
+            text-align: center;
+        }
+        .navigation-top.site-navigation-fixed .wrap a{
+            padding:10px;
+        }
+        #top-menu{
+            text-align: left
+        }
+    }
+    @media screen and (min-width: 64em){
+        .site-branding .custom-logo-link {
+            padding:8px 0 0;
+        }
+        .site-branding .custom-logo-link img{
+            max-width: 280px;
+        }
+    }        
 /*--------------------------------------------------------------
 13.2 Front Page
 --------------------------------------------------------------*/
-
+.page.page-one-column .entry-header,
+.twentyseventeen-front-page.page-one-column .entry-header,
+.archive.page-one-column:not(.has-sidebar) .page-header{
+    margin-bottom:2rem;
+}
 /*--------------------------------------------------------------
 13.4 Posts
 --------------------------------------------------------------*/
@@ -514,6 +640,13 @@ Banner
     display:flex;
     padding:0;
 }
+.recent-posts .post .entry-content,
+.blog .post .entry-content,
+.archive .post .entry-content{
+	color:#fff;
+	padding:40px 20px;
+
+}
 
 @media screen and (min-width: 48em){
     .recent-posts .post,
@@ -550,7 +683,6 @@ Lista de competencias
     background-color:rgba(0,0,0,.4);
     box-shadow:none;
     box-sizing: border-box;
-    font-weight: 600;
     padding:5px;
     position:absolute;
     bottom:0;
@@ -601,14 +733,14 @@ Lista de competencias
 @media screen and (min-width: 48em){
 
     .skills-list li {
-        width: 167px;
+        width: 24%;
+        margin:.5%;        
         height: 167px;
         font-size: 1.2rem;
     }
 }
 @media screen and (min-width: 64em){
 	.skills-list li {
-        width: 216px;
         height: 216px;
         font-size: 1.5rem;
 	}
@@ -655,9 +787,6 @@ Depomentos
 }
 .depoimentos .nome{
 	font-size:.9em;
-	font-weight:700;
-
-
 }
 .depoimentos .detalhes{
 	font-size:.7em;
@@ -695,7 +824,6 @@ Perfis Equipa
 	top:-60px;
 }
 .perfil-equipa .nome{
-    font-weight: 700;
     font-size: 1.2em;
 }
 .perfil-equipa .pais{
@@ -800,7 +928,6 @@ Yarpp Plugin
 
 .entry-content .yarpp-related a{
     text-decoration: none;
-    /* font-weight: normal; */
     box-shadow: none;
 }
 .entry-content .yarpp-related a:hover{
@@ -906,10 +1033,10 @@ Meta Slider
         }
 }
 /*
-Formato de conteúdo no slider 
+Formato de conteÃºdo no slider 
     <a href="http://pt.primaverabss.com/pt/certificacao-primavera-accounting-and-fiscal/" target=_blank>
     <div class="slide-cert bgc-contabil">
-    Certificação PRIMAVERA
+    CertificaÃ§Ã£o PRIMAVERA
     <span class="big-text">Contabilidade</span>
     </div>
     </a>

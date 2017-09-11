@@ -84,6 +84,7 @@ global $twentyseventeencounter;
 							'thumbnail_height' => 300,
 							'post_html' => '<li><article class=post> <h2 class=entry-header> {title}</h2><div class="post-thumbnail"> {thumb} </div></article></li>'
 						);
+						add_filter( 'the_title', 'max_title_length');	
 							wpp_get_mostpopular($args);
 					?>
 					</div><!--/ .Popular posts -->

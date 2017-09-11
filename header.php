@@ -40,6 +40,18 @@
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
+	<div class="search-menu">
+			<label class="search-toggle-button" for="toggle-menu">
+				
+			<svg class="icon icon-search" aria-hidden="true" role="img"> <use href="#icon-search" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use> </svg>
+
+			</label>
+			<input class="toggle-search" type="checkbox" id="toggle-menu">
+			<div class="search-bar">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+
 
 	<?php
 
