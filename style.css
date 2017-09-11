@@ -177,7 +177,7 @@ a:hover .nav-title,
     .search-menu{
         position: absolute;
         width: 100%;
-        z-index: 100;
+        z-index: 6;
     }
     .site-header .search-form{
 
@@ -190,7 +190,7 @@ a:hover .nav-title,
         position: absolute;
         top: -42px;
         right: 0;
-        z-index: 100;
+        z-index: 6;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -231,13 +231,13 @@ a:hover .nav-title,
      input.toggle-search[type=checkbox]:checked ~ .search-bar {
         height:100px;
         top:0px;
-        
+        border-bottom:2px solid #eee;
      }   
 
     @media screen and (min-width: 48em){
         .search-toggle-button,
         input.toggle-search[type=checkbox]{
-            top:-48px;
+            top:-52px;
         }
     }        
 
