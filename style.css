@@ -267,6 +267,13 @@ Footer
         float: left;
         margin-right: 10px;
     }
+
+    /*
+    Contacts list*/
+    ul.contacts-list{
+        line-height: 2em;
+    }
+
 @media screen and (min-width: 48em){
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
@@ -774,6 +781,7 @@ Depomentos
 	top:-80px;
 }
 .depoimentos .foto img{
+    width:140px;
 	filter: grayscale(100%);
 }
 .depoimentos .foto:hover img{
@@ -805,6 +813,18 @@ Depomentos
 	}
 
 }
+
+/* MODELO DE BLOCO DE DEPOIMENTO
+<ul class="depoimentos">
+ 	<li class="depoimento">
+<div class="foto"><img src="http://localhost:8888/primavera-skills/wp-content/uploads/2017/08/testemunho-ana.jpg" /></div>
+<div class="frase">Permitiu-me partilhar contactos e experiências, o que tornou a formação muito mais atrativa.</div>
+<div class="nome">Angélica Pinto</div>
+<div class="detalhes">Certificação em Recursos Humanos</div></li>
+
+</ul>
+
+*/
 /*--------------------------------------------------------------
 Perfis Equipa
 --------------------------------------------------------------*/
@@ -850,6 +870,27 @@ Perfis Equipa
 
 }
 
+/*--------------------------------------------------------------
+Icones
+--------------------------------------------------------------*/
+.icones{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.icones.phone{
+    content: url('assets/images/ic_call_black_24dp.png');    
+}
+.icones.email{
+    content: url('assets/images/ic_mail_outline_black_24dp.png');    
+    
+}
+.icones.mobilephone{
+    content: url('assets/images/ic_phonelink_ring_black_24dp.png');    
+    
+}
 /*--------------------------------------------------------------
 Newsletter
 --------------------------------------------------------------*/
@@ -959,7 +1000,9 @@ Meta Slider
 .bgc-pessoas{
     background-color:rgba(190, 150, 100, 0.9);
 }
-
+.slider-certificacoes .metaslider{
+    margin:0 auto;
+}
 .slider-certificacoes .metaslider .caption-wrap{
     background-color:transparent;
     left:auto;
@@ -1033,7 +1076,7 @@ Meta Slider
         }
 }
 /*
-Formato de conteÃºdo no slider 
+Formato de conteÃºdo no slider de certificações
     <a href="http://pt.primaverabss.com/pt/certificacao-primavera-accounting-and-fiscal/" target=_blank>
     <div class="slide-cert bgc-contabil">
     CertificaÃ§Ã£o PRIMAVERA
@@ -1043,6 +1086,22 @@ Formato de conteÃºdo no slider
 
 */
 
+/* Slider depoimentos  */
+.depoimentos .metaslider{
+    margin:0 auto;
+}
+.depoimentos .metaslider .caption-wrap{
+    background:transparent;
+    opacity: 1;
+    color:#000
+}
+.depoimentos .ms-image > img{
+    visibility: hidden;
+}
+.metaslider .caption-wrap .caption img{
+    max-width: 100%;
+    width:100%!important;
+}
 /*--------------------------------------------------------------
 Plugin WPP - for popupar posts
 https://wordpress.org/plugins/wordpress-popular-posts/
