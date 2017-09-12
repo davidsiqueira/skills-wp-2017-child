@@ -242,7 +242,7 @@ a:hover .nav-title,
     }        
 
 /*--------------------------------------------------------------
-Footer
+ Footer
 --------------------------------------------------------------*/
     .info-footer{
         font-size:.7em;
@@ -267,7 +267,34 @@ Footer
         float: left;
         margin-right: 10px;
     }
-
+    .logo-primavera{
+        display: inline-block;
+        text-decoration: none;
+        width: 134px;
+        height: 20px;
+        background-image: url(assets/images/logo-primavera-blue.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        float: left;
+        margin-right: 10px;
+    }
+    a.logo-primavera{
+        box-shadow: none;
+    }
+    a.logo-primavera:hover{
+        text-decoration: none;
+        box-shadow: none;
+    }
+    .social-navigation + .site-info{
+        margin:0;
+    }
+    .social-navigation.footer-widget{
+        width:100%;
+    }
+    .social-navigation.footer-widget ul{
+        margin:0;
+        display:flex;
+    }        
     /*
     Contacts list*/
     ul.contacts-list{
@@ -403,6 +430,15 @@ Banner
 .page-one-column .panel-content .wrap {
 		max-width: 1200px;
 }
+
+
+.single-post:not(.has-sidebar) #primary,
+.page.page-one-column:not(.twentyseventeen-front-page) #primary,
+.archive.page-one-column:not(.has-sidebar) .page-header,
+.archive.page-one-column:not(.has-sidebar) #primary{
+    max-width: 1024px;
+}
+
 /*--------------------------------------------------------------
 13.1 Header
 --------------------------------------------------------------*/
@@ -432,6 +468,7 @@ Banner
         .site-header{
             display: flex;
             width: 100%;
+            background-color: #4FA8C7;
         }
         .site-branding a{
             padding:14px 0 0;
@@ -980,7 +1017,12 @@ Yarpp Plugin
 .yarpp-related li{
     padding:4px 0;
 }
-
+.entry-content .yarpp-related h3{
+    font-weight: 300;
+}
+.entry-content .yarpp-related a{
+    font-weight: normal;
+}
 
 /*--------------------------------------------------------------
 Meta Slider
