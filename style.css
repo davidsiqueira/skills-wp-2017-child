@@ -1208,35 +1208,62 @@ com um condicional que troca o CTA de acordo com a categoria
 
 .cta-category-large .cta{
     width:100%;
-    height:240px;
+    min-height:100px;
     background-color:rgba(10,20,30,.1);
     margin-bottom:20px;
+    text-align: right;
+    display:block;
+    background-size: cover;
+    background-position: left center;
 }
 .cta-category-large .cta .bloco-texto{
-    width:60%;
+    width:66%;
     background-color:rgba(0,150,180,.9);
     height:100%;
-    float:right;
-    padding:40px;
+    text-align: left;
+    padding:10%;
     color:#fff;
     font-size: 1.6em;
+    display:inline-block;
 }
 .cta-category-large .cta .bloco-texto a{
     color:#fff;
 }    
 
 .cta-category-large .cta.compras-vendas .bloco-texto{
-    background-color:rgba(40, 60, 160, 0.9);
+    background-color:rgba(230, 160, 30, 0.8);
 }
-.cta-category-large .cta.tesourarias .bloco-texto{
-    background-color:rgba(140, 200, 60, 0.9);
+.cta-category-large .cta.tesouraria .bloco-texto{
+    background-color:rgba(140, 200, 60, 0.8);
+}
+.cta-category-large .cta.compras .bloco-texto{
+    background-color:rgba(110, 70, 150, 0.8);
 }
 .cta-category-large .cta.vendas .bloco-texto{
-    background-color:rgba(230, 160, 30, 0.9);
+    background-color:rgba(230, 160, 30, 0.8);
 }
-.cta-category-large .cta.compras-vendas .bloco-texto{
-    background-color:rgba(190, 150, 100, 0.9);
+.cta-category-large .cta.pessoas .bloco-texto{
+    background-color:rgba(190, 150, 100, 0.8);
 }
-.cta-category-large .cta.compras-vendas .bloco-texto{
-    background-color:rgba(40, 60, 160, 0.9);
+.cta-category-large .cta.contabilidade .bloco-texto{
+    background-color:rgba(40, 60, 160, 0.8);
+}
+
+.cta-category-large .cta.compras-vendas{
+    background-image: url(assets/images/bg-cert-vendas.jpg);
+}
+.cta-category-large .cta.compras{
+    background-image: url(assets/images/bg-cert-compras.jpg);
+}
+.cta-category-large .cta.vendas{
+    background-image: url(assets/images/bg-cert-vendas.jpg);
+}
+.cta-category-large .cta.tesouraria{
+    background-image: url(assets/images/bg-cert-tesouro.jpg);
+}
+.cta-category-large .cta.contabilidade{
+    background-image: url(assets/images/bg-cert-contabilidade.jpg);
+}
+.cta-category-large .cta.pessoas{
+    background-image: url(assets/images/bg-cert-pessoas.jpg);
 }

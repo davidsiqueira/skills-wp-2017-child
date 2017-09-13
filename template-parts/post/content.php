@@ -69,7 +69,34 @@
 <!-- Call o action simples no fim da página baseado na categoria -->
 	<div class="cta-category-large">
 		<?php 
-			if (in_category('compras-vendas')){
+			if (in_category('contabilidade')){
+				echo '<a class="cta contabilidade" href="http://pt.primaverabss.com/pt/certificacao-primavera-accounting-and-fiscal/">
+						<div class="bloco-texto">
+							Venda mais e compre melhor com a certificação PRIMAVERA
+							Contabilidade
+						</div>
+					  </a>';
+			}
+			
+			elseif (in_category('gestao-pessoas')){
+
+				echo '<a class="cta pessoas" href="http://pt.primaverabss.com/pt/certificacao-primavera-human-resources/">
+						<div class="bloco-texto">
+							Venda mais e compre melhor com a certificação PRIMAVERA
+							Recursos Humanos
+						</div>
+					  </a>';
+			}
+			elseif (in_category('tesouraria')){
+				echo '<a class="cta tesouraria" href="http://pt.primaverabss.com/pt/certificacao-primavera-treasury/">
+						<div class="bloco-texto">
+							
+							Venda mais e compre melhor com a certificação PRIMAVERA
+							Tesouraria
+						</div>
+					  </a>';
+			}
+			elseif (in_category('compras-vendas')){
 				echo '<div class="cta compras-vendas">
 						<div class="bloco-texto">
 							Venda mais e compre melhor com as certificações PRIMAVERA
@@ -78,41 +105,13 @@
 						</div>
 					  </div>';
 			}
-			elseif (in_category('contabilidade')){
-				echo '<div class="cta contabilidade">
-						<div class="bloco-texto">
-							<a class="link-contabilidade" href="http://pt.primaverabss.com/pt/certificacao-primavera-accounting-and-fiscal/">
-							Venda mais e compre melhor com a certificação PRIMAVERA
-							Contabilidade</a>
-						</div>
-					  </div>';
-			}
-			elseif (in_category('gestao-pessoas')){
-
-				echo '<div class="cta pessoas">
-						<div class="bloco-texto">
-							<a class="link-pessoas" href="http://pt.primaverabss.com/pt/certificacao-primavera-human-resources/">
-							Venda mais e compre melhor com a certificação PRIMAVERA
-							Recursos Humanos</a>
-						</div>
-					  </div>';
-			}
-			elseif (in_category('tesouraria')){
-				echo '<div class="cta tesouraria">
-						<div class="bloco-texto">
-							<a class="link-tesouraria" href="http://pt.primaverabss.com/pt/certificacao-primavera-treasury/">
-							Venda mais e compre melhor com a certificação PRIMAVERA
-							Tesouraria</a>
-						</div>
-					  </div>';
-			}
 			else {
-				echo '<div class="cta certificacoes">
-				<div class="bloco-texto">
-					<a class="link-tesouraria" href="http://pt.primaverabss.com/pt/certificacao-primavera/">
-					Conheça as Certificações PRIMAVERA</a>
-					</div>
-				</div>';
+				echo '<a class="cta certificacoes" href="http://pt.primaverabss.com/pt/certificacao-primavera/">
+						<div class="bloco-texto">
+							
+							Conheça as Certificações PRIMAVERA
+							</div>
+						</a>';
 			}
 		?>
 	</div><!-- cta-category-large -->
