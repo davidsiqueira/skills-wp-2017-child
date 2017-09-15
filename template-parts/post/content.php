@@ -50,6 +50,14 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
+
+	<!-- Call to action simples no início da página baseado na categoria -->
+	<div class="cta-category-small">
+            <?php
+                print_category_small(get_primary_cat());
+            ?>
+        </div> <!-- fim do CTA -->
+
 		<?php
 		/* translators: %s: Name of current post */
 		the_content( sprintf(
@@ -66,55 +74,12 @@
 		?>
 	</div><!-- .entry-content -->
 
-<!-- Call o action simples no fim da página baseado na categoria -->
-	<div class="cta-category-large">
-		<?php 
-			if (in_category('contabilidade')){
-				echo '<a class="cta contabilidade" href="http://pt.primaverabss.com/pt/certificacao-primavera-accounting-and-fiscal/">
-						<div class="bloco-texto">
-							Venda mais e compre melhor com a certificação PRIMAVERA
-							Contabilidade
-						</div>
-					  </a>';
-			}
-			
-			elseif (in_category('gestao-pessoas')){
-
-				echo '<a class="cta pessoas" href="http://pt.primaverabss.com/pt/certificacao-primavera-human-resources/">
-						<div class="bloco-texto">
-							Venda mais e compre melhor com a certificação PRIMAVERA
-							Recursos Humanos
-						</div>
-					  </a>';
-			}
-			elseif (in_category('tesouraria')){
-				echo '<a class="cta tesouraria" href="http://pt.primaverabss.com/pt/certificacao-primavera-treasury/">
-						<div class="bloco-texto">
-							
-							Venda mais e compre melhor com a certificação PRIMAVERA
-							Tesouraria
-						</div>
-					  </a>';
-			}
-			elseif (in_category('compras-vendas')){
-				echo '<div class="cta compras-vendas">
-						<div class="bloco-texto">
-							Venda mais e compre melhor com as certificações PRIMAVERA
-							<a class="link-compra" href="http://pt.primaverabss.com/pt/certificacao-primavera-purchases-and-inventory/">Compras</a>
-							<a href="http://pt.primaverabss.com/pt/certificacao-primavera-sales/">Vendas</a>
-						</div>
-					  </div>';
-			}
-			else {
-				echo '<a class="cta certificacoes" href="http://pt.primaverabss.com/pt/certificacao-primavera/">
-						<div class="bloco-texto">
-							
-							Conheça as Certificações PRIMAVERA
-							</div>
-						</a>';
-			}
-		?>
-	</div><!-- cta-category-large -->
+<!-- Call to action simples no fim da página baseado na categoria -->
+<div class="cta-category-large">
+    <?php
+        print_category_large(get_primary_cat());
+    ?>
+</div> <!-- fim do CTA -->
 
 <!-- Bloco de rating -->
 

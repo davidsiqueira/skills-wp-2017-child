@@ -362,6 +362,7 @@ Banner
     text-align:right;
     line-height: 1em;
     text-shadow: 0 2px 10px rgba(0,0,0,.5);
+    text-transform: uppercase;
 }
 @media screen and (min-width: 30em){
  	.banner-skills .banner-image{
@@ -382,6 +383,11 @@ Banner
     	font-size:2.5em;
     }
 }
+@media screen and (min-width: 64em){
+    .banner-skills .banner-slogan{
+        right:25%;
+    }        
+}    
 .category-header{
     width:100%;
     height:200px;
@@ -823,7 +829,8 @@ Depomentos
 .depoimentos .foto{
 	width:140px;
 	height:140px;
-	overflow:hidden;
+    overflow:hidden;
+    background-color:#f1f2f3;
 	box-shadow:-4px 4px rgba(0,150,180,.9);
 	position:absolute;
 	top:-80px;
@@ -1076,8 +1083,8 @@ Meta Slider
         color:#fff;
 
 }
-.slider-certificacoes .slide-cert .big-text{
-	font-size:2em;
+.big-text{
+	font-size:1.5em;
 	display:block;
 	line-height:1em;
 }
@@ -1120,8 +1127,8 @@ Meta Slider
          font-size: 20px; 
         
     }
-    .slider-certificacoes .slide-cert .big-text{
-    font-size:3em;
+    .big-text{
+    font-size:2em;
     }
 }
 @media screen and (min-width: 64em){
@@ -1217,15 +1224,22 @@ com um condicional que troca o CTA de acordo com a categoria
     background-position: left center;
 }
 .cta-category-large .cta .bloco-texto{
-    width:66%;
+    width:100%;
     background-color:rgba(0,150,180,.9);
     height:100%;
     text-align: left;
-    padding:10%;
+    padding:20px;
     color:#fff;
     font-size: 1.6em;
     display:inline-block;
 }
+@media screen and (min-width: 30em){    
+    .cta-category-large .cta .bloco-texto{
+        width:66%;
+        padding:10% 5%;
+        
+    }   
+} 
 .cta-category-large .cta .bloco-texto a{
     color:#fff;
 }    
@@ -1266,4 +1280,88 @@ com um condicional que troca o CTA de acordo com a categoria
 }
 .cta-category-large .cta.pessoas{
     background-image: url(assets/images/bg-cert-pessoas.jpg);
+}
+
+
+/*------------------------
+        Cta-small
+-------------------------*/
+
+.cta-category-small .cta{
+    float: right;
+    width:160px;
+    height: auto;
+    margin:0 0 3% 3%;
+    text-align: right;
+    display:block;
+    background-size: cover;
+    background-position: left center;
+}
+@media screen and (min-width: 30em){
+    .cta-category-small .cta{
+        width:300px;
+        height: 300px;
+    }        
+}    
+.cta-category-small .cta .bloco-texto{
+    font-family: 'Montserrat', sans-serif;
+    width:100%;
+    background-color:rgba(0,150,180,.9);
+    height:100%;
+    text-align: left;
+    color:#fff;
+    padding: 25% 7%;
+    font-size: 1em;
+    display:inline-block;
+}
+
+.cta-category-small .cta .bloco-texto h1{
+    margin-top: 3.5%;
+    font-family: 'Montserrat', 'Sans-Serif';
+    font-size: 1.7em;
+    line-height: 1.2em;
+}
+
+.cta-category-small .cta.compras-vendas .bloco-texto{
+    background-color:rgba(230, 160, 30, 0.8);
+}
+.cta-category-small .cta.tesouraria .bloco-texto{
+    background-color:rgba(140, 200, 60, 0.8);
+}
+.cta-category-small .cta.compras .bloco-texto{
+    background-color:rgba(110, 70, 150, 0.8);
+}
+.cta-category-small .cta.vendas .bloco-texto{
+    background-color:rgba(230, 160, 30, 0.8);
+}
+.cta-category-small .cta.pessoas .bloco-texto{
+    background-color:rgba(190, 150, 100, 0.8);
+}
+.cta-category-small .cta.contabilidade .bloco-texto{
+    background-color:rgba(40, 60, 160, 0.8);
+}
+.cta-category-small .cta.cert .bloco-texto{
+    background-color:rgba(23, 158, 185, 0.8);
+}
+
+.cta-category-small .cta.compras-vendas{
+    background-image: url(assets/images/menu-skill-vendas.jpg);
+}
+.cta-category-small .cta.compras{
+    background-image: url(assets/images/menu-skill-compra.jpg);
+}
+.cta-category-small .cta.vendas{
+    background-image: url(assets/images/menu-skill-vendas.jpg);
+}
+.cta-category-small .cta.tesouraria{
+    background-image: url(assets/images/menu-skill-tesouro.jpg);
+}
+.cta-category-small .cta.contabilidade{
+    background-image: url(assets/images/menu-skill-contabilidade.jpg);
+}
+.cta-category-small .cta.pessoas{
+    background-image: url(assets/images/menu-skill-pessoas.jpg);
+}
+.cta-category-small .cta.cert{
+    background-image: url(assets/images/menu-skill-default.jpg);
 }
